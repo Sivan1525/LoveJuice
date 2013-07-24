@@ -39,3 +39,7 @@ gem 'jquery-rails'
 group :development do 
 	gem 'therubyracer', :platforms => :ruby
 end
+
+gem 'devise'
+gem 'paperclip'
+gem 'acts_as_commentable', '3.0.1'

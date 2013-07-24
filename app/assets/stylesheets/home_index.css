@@ -289,6 +289,7 @@ a {
     float: left;
     font-size: 11px;
     margin: 0 15px 15px 0;
+    min-height: 190px;
     padding: 15px 15px 0;
     position: relative;
     width: 192px;
@@ -360,4 +361,95 @@ a {
 .comment textarea:focus {
     background-color: #FFFFFF;
     box-shadow: 0 1px 1px rgba(34, 29, 29, 0.1) inset;
+}
+
+/* big pin styles */
+.bigpin {
+    background-color: transparent;
+    box-shadow: none;
+    float: none;
+    margin: 0;
+    padding: 5px;
+    width: 600px;
+}
+.bigpin .owner {
+    border-bottom: 1px solid #D1CDCD;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.bigpin .follow_button {
+    background-color: #D43638;
+    background-image: -webkit-linear-gradient(center top , #EB5367, #E04751 50%, #DE404A 50%, #D43638);
+    background-image: -moz-linear-gradient(center top , #EB5367, #E04751 50%, #DE404A 50%, #D43638);
+    background-image: linear-gradient(center top , #EB5367, #E04751 50%, #DE404A 50%, #D43638);
+    border-color: #910101;
+    color: #FCF9F9;
+    font-size: 13px;
+    padding: 7px 9px;
+    text-shadow: 0 -1px rgba(34, 25, 25, 0.5);
+}
+.bigpin .owner_img {
+    float: left;
+    margin-right: 9px;
+    width: 50px;
+}
+.bigpin .owner_img img {
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+.bigpin .owner_name {
+    font-size: 23px;
+    line-height: 1em;
+    margin-bottom: 2px;
+}
+.bigpin .owner_when {
+    color: #8C7E7E;
+    display: block;
+    font-size: 13px;
+    margin: 5px 0 0;
+    padding-left: 60px;
+}
+.bigpin .holder {
+    margin-top: 10px;
+}
+.bigpin .actions {
+    left: 7px;
+    top: 15px;
+}
+.bigpin .image {
+    cursor: pointer;
+}
+.bigpin .image img {
+    display: block;
+    margin: 0 auto;
+    max-width: none;
+}
+.bigpin .desc {
+    border-bottom: 1px solid #D1CDCD;
+    padding-bottom: 10px;
+}
+.bigpin .comments {
+    margin: 20px 0;
+    overflow: hidden;
+    width: 99%;
+}
+.bigpin .comments p {
+    color: #211922;
+    font-size: 13px;
+    line-height: 1.33em;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+.bigpin .comment {
+    background-color: transparent;
+    border-top: medium none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+.bigpin  .comment textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 96%;
 }

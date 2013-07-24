@@ -1,5 +1,5 @@
-  <%= stylesheet_link_tag    "home_index" %>
-  <%= javascript_include_tag "home_index","jquery.masonry.min" %>
+  <%= stylesheet_link_tag    "home_index","colorbox.css" %>
+  <%= javascript_include_tag "jquery.min","home_index","jquery.masonry.min","jquery.colorbox-min","script"%>
         <!-- header panel -->
         <div class="header_panel">
 
@@ -72,7 +72,7 @@
                         <a href="#" class="button">Like</a>
                         <a href="#" class="button disabled comment_tr">Comment</a>
                     </div>
-                    <a class="image ajax" href="#" title="Photo number 1" pin_id="1">
+                    <a class="image ajax" href="/home/index?file_name=pic1.jpg" title="Photo number 1" pin_id="1">
                         <img alt="Photo number 1" src="/assets/pic1.jpg">
                     </a>
                 </div>
@@ -96,7 +96,7 @@
                         <a href="#" class="button">Like</a>
                         <a href="#" class="button comment_tr">Comment</a>
                     </div>
-                    <a class="image ajax" href="#" title="Photo number 2">
+                    <a class="image ajax" href="/home/index?file_name=pic2.jpg" title="Photo number 2">
                         <img alt="Photo number 2" src="/assets/pic2.jpg">
                     </a>
                 </div>
