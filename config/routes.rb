@@ -14,6 +14,7 @@ end
       get 'like_image'
       post 'add_comment'
       get 'accept_repin'
+      get 'user_profile'
     end
   end  
 

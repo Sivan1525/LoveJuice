@@ -10,7 +10,7 @@
   <div class="holder">
     <% if user_signed_in?%> 
       <div class="actions">
-        <a href="#" class="button">Repin</a>
+        <%= link_to("Repin",accept_repin_home_index_path(:id => @photo.id,:from_popup => true),:class =>"button") if (current_user.id !=@photo.user_id && @photo.already_repinned(current_user)) %> 
         <%=link_to("Like",like_image_home_index_path(:id=>@photo.id),:class=>"button likebutton",:remote=>true) if current_user.id != @photo.user_id%>
       </div>
     <%end%>

@@ -1,34 +1,3 @@
-<!-- header panel -->
-<div class="header_panel">
-  <!-- logo -->
-  <a href="#" class="logo"></a>
-  <!-- search form -->
-  <%= render :partial=> 'shared/search_form' %>
-  <!-- navigation menu -->
-  <%= render "shared/menus"%>
-</div>
-<%unless user_signed_in?%>
-  <a href="#x" class="overlay2" id="join_form"></a>
-  <div class="popup" id="new_registration_form">
-    <%= render :partial=> 'shared/registration_form' %>
-  </div>
-  <!-- login form -->
-  <a href="#x" class="overlay3" id="login_form"></a>
-  <div class="popup" id="new_login_form">
-    <%= render :partial=> 'shared/new_login' %>
-  </div>
-<!-- upload form -->
-<%else%>
-  <%= render :partial=> 'shared/upload_form' %>
-<%end%>
-
-<%unless flash[:notice].blank?%>
-  <h2 class="pname"><strong><%= flash[:notice]%></strong></h2>
-<%end%>
-
-<% unless params[:q].blank? %>
-  <h2 class="pname">Search results for <strong><%= params[:q]%></strong></h2>
-<% end%>
 <!-- main container -->
 <div class="main_container">
 <!-- pin elements-->
