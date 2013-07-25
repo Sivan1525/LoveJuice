@@ -265,7 +265,7 @@ a {
     z-index: 3;
 }
 .ctrl_grp input[type="text"]:focus, .ctrl_grp input[type="password"]:focus {
-    border-color: ##993300;
+    border-color: #993300;
     box-shadow: 0 1px rgba(34, 25, 25, 0.15) inset, 0 1px rgba(255, 255, 255, 0.8), 0 0 14px rgba(235, 82, 82, 0.35);
 
 }
