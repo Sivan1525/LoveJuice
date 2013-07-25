@@ -13,7 +13,7 @@
   <p class="desc"><%=photo.title%></p>
   <p class="info">
     <span class="LikesCount"><strong><%=photo.item_likes.size%></strong> likes</span>
-    <span class="LikesCount"><strong><%=photo.repin_count%></strong> repins</span>
+    <span ><strong><%=photo.repin_count%></strong> repins</span>
     <span class="CommentCount"><strong><%=photo.item_comments.size%> comments</span>
   </p>
   <%= render "shared/new_comment_form",:photo=>photo%>
