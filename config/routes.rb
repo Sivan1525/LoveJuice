@@ -15,11 +15,11 @@ end
       post 'add_comment'
       get 'accept_repin'
       get 'user_profile'
-      
+
     end
   end  
 
-  
+  match 'profile' => 'home#user_profile'
 
   
   root :to => "home#index"
