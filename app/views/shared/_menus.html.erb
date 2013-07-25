@@ -1,0 +1,35 @@
+<ul class="nav">
+  <li>
+    <a href="#">About<span></span></a>
+      <ul>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Pin It Button</a></li>
+        <li><a href="#" target="_blank">For Businesses</a></li>
+        <li class="div"><a href="#">Careers</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Blog</a></li>
+        <li class="div"><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Copyright</a></li>
+        <li><a href="#">Trademark</a></li>
+      </ul>
+  </li>
+  <%if user_signed_in?%>
+    <li><a href="#add_form" id="login_pop">Add +</a></li>
+    <li>
+      <a href="#">Profile<span></span></a>
+      <ul>
+        <li><a href="#">Invite Friends</a></li>
+        <li><a href="#">Find Friends</a></li>
+        <li class="div"><a href="#">Boards</a></li>
+        <li><a href="#">Pins</a></li>
+        <li><a href="#">Likes</a></li>
+        <li class="div"><a href="#">Settings</a></li>
+        <li><%=link_to('Logout', destroy_user_session_path)%></li>
+      </ul>
+    </li>
+  <%else%>
+     <li><a href="#join_form" id="join_pop" >Join</a></li>
+     <li><a href="#login_form" id="login_pop">Login</a></li>
+  <%end%>
+</ul>

@@ -159,8 +159,8 @@ a {
     right: 0;
 }
 
-/* popup upload form styles */
-.overlay {
+/* upload form styles */
+.overlay, .overlay2, .overlay3 {
     background-color: #FFFFFF;
     bottom: 0;
     display: none;
@@ -171,7 +171,7 @@ a {
     top: 0;
     z-index: 9;
 }
-.overlay:target {
+.overlay:target, .overlay2:target, .overlay3:target {
     display: block;
 }
 .popup {
@@ -199,7 +199,7 @@ a {
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
-.overlay:target+.popup {
+.overlay:target+.popup, .overlay2:target+.popup, .overlay3:target+.popup {
     top: 50%;
     opacity: 1 ;
     visibility: visible;
@@ -239,6 +239,78 @@ a {
 }
 .popup form input[type="file"] {
     font-size: 18px;
+}
+
+/* login & join form styles */
+.ctrl_grp li {
+    display: block;
+    font-size: 21px;
+    list-style: none outside none;
+    margin-bottom: 18px;
+    position: relative;
+}
+.ctrl_grp input[type="text"], .ctrl_grp input[type="password"] {
+    background-color: transparent;
+    border: 1px solid #AD9C9C;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px rgba(34, 25, 25, 0.15) inset, 0 1px #FFFFFF;
+    color: #221919;
+    display: block;
+    font-size: 18px;
+    line-height: 1.4em;
+    padding: 6px 12px;
+    position: relative;
+    transition: all 0.08s ease-in-out 0s;
+    width: 95%;
+    z-index: 3;
+}
+.ctrl_grp input[type="text"]:focus, .ctrl_grp input[type="password"]:focus {
+    border-color: ##993300;
+    box-shadow: 0 1px rgba(34, 25, 25, 0.15) inset, 0 1px rgba(255, 255, 255, 0.8), 0 0 14px rgba(235, 82, 82, 0.35);
+
+}
+.ctrl_grp label {
+    -moz-user-select: none;
+    color: #EFEFEF;
+    display: block;
+    font-size: 18px;
+    left: 13px;
+    line-height: 1.4em;
+    position: absolute;
+    top: 5px;
+    transition: all 0.16s ease-in-out 0s;
+    z-index: 2;
+}
+.ctrl_grp .fff {
+    background-color: #FFFFFF;
+    border-radius: 8px 8px 8px 8px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.submit_button {
+    background-image: -moz-linear-gradient(center top , #FDFAFB, #F9F7F7 50%, #F6F3F4 50%, #F0EDED);
+    border: 1px solid #BBBBBB;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.35) inset;
+    color: #524D4D;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "helvetica neue",arial,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1em;
+    margin: 0;
+    padding: 0.45em 0.825em;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.9);
+    transition: all 0.05s ease-in-out 0s;
+}
+.submit_button:hover {
+    box-shadow: 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.35) inset, 0 0 10px rgba(232, 230, 230, 0.75);
 }
 
 /* photo pins - general styles */
@@ -452,4 +524,12 @@ a {
     padding: 10px;
     margin-bottom: 10px;
     width: 96%;
+}
+
+/* profile page */
+.pname {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
 }

@@ -1,8 +1,26 @@
 Lovejuice::Application.routes.draw do
-  devise_for :users
+  
+  devise_for :users,:controller =>{:registrations =>'registrations',:sessions => 'sessions'}
 
-  get "home/index"
+  devise_scope :user do
+   #post "registrations/create", :to => "registrations#create"
+end
+
+
+  resources :home , only: [:index,:upload_image] do 
+    collection do
+      post 'upload_image'
+      get 'show_image'
+      get 'like_image'
+      post 'add_comment'
+    end
+  end  
+
+  
+
+  
   root :to => "home#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,9 @@
+<%= form_for(@comment, :html =>{class: "comment"},:url => add_comment_home_index_path) do |f| %>
+  <% if user_signed_in?%>
+   <%= f.hidden_field :item_id,:value=>photo.id%>
+   <%= f.hidden_field :item_type,:value=>photo.class%>
+   <%= f.hidden_field :user_id,:value=>current_user.id%>
+   <%end%>
+   <textarea placeholder="Add a comment..." maxlength="1000" name="item_comment[description]"></textarea>
+   <%= f.submit "Comment",:class=>"button" %>
+<%end%>

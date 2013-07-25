@@ -1,0 +1,11 @@
+<a href="#x" class="overlay" id="add_form"></a>
+<div class="popup">
+  <div class="header">
+    <a class="close" href="#close">x</a>
+    <h2>Upload a Pin</h2>
+  </div>
+  <%= form_for(@image, :url => upload_image_home_index_path) do |f| %>
+    <%= f.file_field :image,:id=>"image_file" %>
+    <%= f.hidden_field :user_id,:value=>current_user.id %>
+  <%end%>
+</div>

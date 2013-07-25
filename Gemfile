@@ -5,8 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
-
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,9 +36,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 group :development do 
+	gem 'debugger'
 	gem 'therubyracer', :platforms => :ruby
+	gem 'mysql2'
 end
 
 gem 'devise'
 gem 'paperclip'
-gem 'acts_as_commentable', '3.0.1'

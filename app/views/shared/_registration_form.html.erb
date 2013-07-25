@@ -1,0 +1,39 @@
+<div class="header">
+  <a class="close" href="#close">x</a>
+  <h2>Create your account</h2>
+</div>
+
+<%= form_for(@resource, :as => :user, :url => registration_path(:user)) do |f| %>
+  <ul class="ctrl_grp">
+    <li>
+      <input type="text" name="user[email]" class = "email" />
+      <label>Email Address</label>
+      <span class="fff"></span>
+    </li>
+    <li>
+      <input type="password" name="user[password]" />
+      <label>Password</label>
+      <span class="fff"></span>
+    </li>
+
+    <li>
+      <input type="password" name="user[password_confirmation]" />
+      <label>Password confirmation</label>
+      <span class="fff"></span>
+    </li>
+    <li>
+      <input type="text" name="user[first_name]" />
+      <label>First Name</label>
+      <span class="fff"></span>
+    </li>
+    <li>
+      <input type="text" name="user[last_name]" />
+      <label>Last Name</label>
+      <span class="fff"></span>
+    </li>
+  </ul>
+  <div>
+    <input type="hidden" name="Join" value="Join" />
+    <button class="submit_button" type="submit" name="commit">Create Account</button>
+  </div>
+<%end%>
