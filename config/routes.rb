@@ -13,6 +13,7 @@ end
       get 'show_image'
       get 'like_image'
       post 'add_comment'
+      get 'accept_repin'
     end
   end  
 

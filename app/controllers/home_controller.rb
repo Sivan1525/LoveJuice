@@ -39,4 +39,13 @@ class HomeController < ApplicationController
     end
     redirect_to root_url,:notice=>notice
   end
+
+  def accept_repin
+    @photo = Photo.find(params[:id])
+
+    @repin_photo = Photo.new(:repin_id =>@photo.id,:user_id => current_user.id)
+    @repin_photo.image = @photo.image
+    message,counted = @repin_photo.save ? ["Repinned succesfully",@photo.increment_repin_count!] : "Already repinned" 
+    redirect_to root_url,:notice=> message
+  end
 end

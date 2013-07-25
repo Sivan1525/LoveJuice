@@ -2,8 +2,8 @@
   <div class="holder">
     <div class="actions" >
       <% if user_signed_in?%>
-        <a href="#" class="button repinbutton">Repin</a>
-         <%=link_to("Like",like_image_home_index_path(:id=>photo.id),:class=>"button likebutton",:remote=>true) if current_user.id !=photo.user_id %>
+        <%= link_to("Repin",accept_repin_home_index_path(:id => photo.id),:class =>"button repinbutton") if (current_user.id !=photo.user_id && photo.already_repinned(current_user)) %> 
+         <%=link_to("Like",like_image_home_index_path(:id=>photo.id),:class=>"button likebutton",:remote=>true) unless current_user.id ==photo.user_id  %>
       <%end%>
       <a href="#" class="button comment_tr">Comment</a>
     </div>
@@ -13,7 +13,7 @@
   <p class="desc"><%=photo.title%></p>
   <p class="info">
     <span class="LikesCount"><strong><%=photo.item_likes.size%></strong> likes</span>
-    <span>1 repins</span>
+    <span class="LikesCount"><strong><%=photo.repin_count%></strong> repins</span>
     <span class="CommentCount"><strong><%=photo.item_comments.size%> comments</span>
   </p>
   <%= render "shared/new_comment_form",:photo=>photo%>

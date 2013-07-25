@@ -63,20 +63,4 @@ $(document).ready(function(){
         }
     });
 
-
-    // onclick event handler (for repin button)
-    $('.pin .actions .repinbutton').click(function () {
-        var iPinId = $(this).parent().parent().parent().attr('pin_id');
-        $.ajax({ 
-          url: 'service.php',
-          type: 'POST',
-          data: 'add=repin&id=' + iPinId,
-          cache: false, 
-          success: function(res){
-            window.location.href = 'profile.php?id=' + res;
-          } 
-        });
-        return false;
-    });
-    
 });
