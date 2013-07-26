@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   before_filter :comment_collection
+
   def index
     @photos = Photo.search(params[:q])
   end
@@ -58,6 +59,8 @@ class HomeController < ApplicationController
     else  
       @resource = User.new
     end
+
     @comment  = ItemComment.new
+    
   end
 end
